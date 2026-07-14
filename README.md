@@ -1,4 +1,4 @@
-# bowosc.github.io
+# templatesite
 
 Minimal multi-page GitHub Pages site.
 

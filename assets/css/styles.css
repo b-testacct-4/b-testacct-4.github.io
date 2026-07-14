@@ -36,11 +36,13 @@ body {
 .nav {
   display: flex;
   flex-direction: column;
-  flex: 0 0 72px;
+  /* Grow to fit the longest page name (so titles don't wrap), up to a sensible cap. */
+  flex: 0 0 auto;
+  min-width: 72px;
+  max-width: 240px;
   gap: 2px;
   padding-right: 24px;
   text-align: right;
-  text-transform: lowercase;
 }
 
 .nav a {
@@ -139,7 +141,7 @@ time {
   }
 
   .nav {
-    flex-basis: 80px;
+    min-width: 80px;
     padding-right: 32px;
   }
 
