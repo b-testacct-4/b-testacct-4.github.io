@@ -1,32 +1,61 @@
 <!doctype html>
-<html lang="en"><head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="A somewhat minimal GitHub Pages site.">
-    <meta name="theme-color" content="#ffffff">
-    <title>Your Site</title>
-    <link rel="icon" href="assets/img/mark.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="assets/css/styles.css">
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Field Notes</title>
+    <style>
+      :root { --ink: #1a1a1a; --muted: #6b6b6b; --accent: #b4531f; --line: #ececec; }
+      * { box-sizing: border-box; }
+      body { margin: 0; font-family: Georgia, "Times New Roman", serif; color: var(--ink); background: #fbfaf8; line-height: 1.75; }
+      nav { display: flex; justify-content: space-between; align-items: baseline; max-width: 680px; margin: 0 auto; padding: 34px 24px 0; }
+      nav .brand { font-size: 1.3rem; font-weight: 700; letter-spacing: -0.01em; }
+      nav a { color: var(--muted); text-decoration: none; margin-left: 18px; font-size: 0.95rem; }
+      nav a:hover { color: var(--accent); }
+      main { max-width: 680px; margin: 0 auto; padding: 40px 24px 80px; }
+      .lede { font-size: 1.15rem; color: var(--muted); border-bottom: 1px solid var(--line); padding-bottom: 34px; margin-bottom: 10px; }
+      article { padding: 30px 0; border-bottom: 1px solid var(--line); }
+      article .date { color: var(--muted); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; }
+      article h2 { margin: 6px 0 8px; font-size: 1.55rem; }
+      article h2 a { color: var(--ink); text-decoration: none; }
+      article h2 a:hover { color: var(--accent); }
+      article p { margin: 0; color: #333; }
+      footer { text-align: center; color: var(--muted); padding: 30px; font-size: 0.9rem; }
+    </style>
   </head>
   <body>
-    <div class="layout">
-      <nav class="nav" aria-label="Primary navigation">
-        <a href="index.html" aria-current="page">about</a>
-        <a href="notes.html">notes</a>
-        <a href="projects.html">projects</a>
-        <a href="contact.html">contact</a>
-      </nav>
+    <nav>
+      <span class="brand">Field Notes</span>
+      <div>
+        <a href="#posts">Archive</a>
+        <a href="#about">About</a>
+      </div>
+    </nav>
+    <main id="posts">
+      <p class="lede">Occasional writing about design, code, and the things I'm learning along the way.</p>
 
-      <main class="content">
-        <article>
-          <img class="mark" src="assets/img/mark.svg" alt="">
-          <h1>Your m</h1>
-          <p>Hi!</p>
-          <p>This is a minimal GitHub Pages site for notes, projects, and links.</p>
-          <p>Find the code on <a href="https://github.com/">GitHub</a>.</p>
-        </article>
-      </main>
-    </div>
-  
+      <article>
+        <span class="date">March 4, 2026</span>
+        <h2><a href="#">On keeping things small</a></h2>
+        <p>Every project starts simple and drifts toward complexity. Here's how I try to fight that drift — and why the smallest version is usually the right one to ship first.</p>
+      </article>
 
-</body></html>
+      <article>
+        <span class="date">February 18, 2026</span>
+        <h2><a href="#">A week without notifications</a></h2>
+        <p>I turned everything off for seven days. Some of it I turned back on. Most of it I didn't miss at all. A few notes on attention and defaults.</p>
+      </article>
+
+      <article>
+        <span class="date">January 30, 2026</span>
+        <h2><a href="#">Writing is thinking</a></h2>
+        <p>The fastest way I've found to figure out what I actually believe is to try to explain it to someone else in plain words.</p>
+      </article>
+    </main>
+    <section id="about" style="max-width:680px;margin:0 auto;padding:34px 24px;border-top:1px solid var(--line);">
+      <h2 style="font-size:1.4rem;margin:0 0 10px;">About</h2>
+      <p style="margin:0;color:#333;">I'm a writer and maker sharing notes on design, code, and the things I'm learning. Say hello at <a href="mailto:hello@example.com" style="color:var(--accent);">hello@example.com</a>.</p>
+    </section>
+    <footer>© 2026 · Written by hand.</footer>
+  </body>
+</html>
