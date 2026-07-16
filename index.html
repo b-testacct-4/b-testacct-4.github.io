@@ -2,73 +2,144 @@
 <html lang="en"><head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Alex Chen — Resume</title>
-    <style>
-      :root { --ink: #1f2328; --muted: #6a737d; --accent: #0969da; --line: #e4e7eb; }
-      * { box-sizing: border-box; }
-      body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; color: var(--ink); background: #f6f8fa; line-height: 1.6; }
-      main { max-width: 780px; margin: 40px auto; background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 48px; }
-      header { border-bottom: 2px solid var(--ink); padding-bottom: 20px; margin-bottom: 8px; }
-      header h1 { margin: 0; font-size: 2.2rem; }
-      header .role { color: var(--accent); font-weight: 700; margin: 4px 0 10px; }
-      header .contact { color: var(--muted); font-size: 0.92rem; }
-      header .contact a { color: var(--muted); text-decoration: none; }
-      section { padding: 24px 0; border-bottom: 1px solid var(--line); }
-      section:last-of-type { border-bottom: none; }
-      h2 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin: 0 0 16px; }
-      .item { margin-bottom: 18px; }
-      .item .top { display: flex; justify-content: space-between; gap: 12px; }
-      .item h3 { margin: 0; font-size: 1.05rem; }
-      .item .when { color: var(--muted); font-size: 0.88rem; white-space: nowrap; }
-      .item .org { color: var(--accent); font-weight: 600; font-size: 0.95rem; }
-      .item p { margin: 6px 0 0; color: #444; font-size: 0.95rem; }
-      .skills { display: flex; flex-wrap: wrap; gap: 8px; }
-      .skills span { background: #eef1f4; border-radius: 6px; padding: 5px 12px; font-size: 0.88rem; }
-      @media (max-width: 600px) { main { padding: 28px; margin: 16px; } }
-    </style>
+    <meta name="description" content="A clean, minimal personal portfolio.">
+    <title>Cleanfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="assets/css/styles.css">
   </head>
   <body>
-    <main>
-      <header>
-        <h1>Alex Chen</h1>
-        <p class="role">Software Engineer</p>
-        <p class="contact">San Francisco, CA · <a href="mailto:alex@example.com">alex@example.com</a> · <a href="#">linkedin.com/in/alexchen</a></p>
+    <div class="app light" id="top">
+      <header class="header center">
+        <h3><a href="#top" class="link">JS.</a></h3>
+        <nav class="center nav" aria-label="Primary">
+          <ul class="nav__list">
+            <li class="nav__list-item"><a href="#about" class="link link--nav">About</a></li>
+            <li class="nav__list-item"><a href="#projects" class="link link--nav">Projects</a></li>
+            <li class="nav__list-item"><a href="#skills" class="link link--nav">Skills</a></li>
+            <li class="nav__list-item"><a href="#contact" class="link link--nav">Contact</a></li>
+          </ul>
+        </nav>
       </header>
 
-      <section>
-        <h2>Summary</h2>
-        <p style="margin:0;color:#444;">Engineer with 6+ years building reliable web products end to end. I care about clear code, fast pages, and shipping things that hold up in production.</p>
-      </section>
+      <main>
+        <div class="about center" id="about">
+          <div class="about__header">
+            <img src="assets/img/avatar.svg" alt="John Smith" class="about__picture">
+            <div class="about__intro">
+              <h1>Hi, I am <span class="about__name">John Smith.</span></h1>
+              <h2 class="about__role">A Front End Engineer.</h2>
+              <p class="about__desc">
+                Adipisicing sit fugit ullam unde aliquid sequi. Facilis soluta facilis
+                perspiciatis corporis nulla aspernatur. Autem eligendi rerum delectus modi
+                quisquam, illo ut quasi nemo ipsa cumque.
+              </p>
+            </div>
+          </div>
 
-      <section>
-        <h2>Experience</h2>
-        
-        
-      <div class="item">
-          <div class="top"><h3>Senior Engineer</h3><span class="when">2023 — Present</span></div>
-          <div class="org">Northwind Labs</div>
-          <p>Led the rebuild of the core dashboard, cutting load time by 60% and mentoring three junior engineers.</p>
-        </div><div class="item">
-          <div class="top"><h3>Software Engineer</h3><span class="when">2020 — 2023</span></div>
-          <div class="org">Bright Peak</div>
-          <p>Shipped the billing and notifications systems from scratch, serving 40k monthly users.</p>
-        </div></section>
-
-      <section>
-        <h2>Education</h2>
-        <div class="item">
-          <div class="top"><h3>B.S. Computer Science</h3><span class="when">2016 — 2020</span></div>
-          <div class="org">State University</div>
+          <div class="about__contact center">
+            <a href="https://example.com"><span class="btn btn--outline">Resume</span></a>
+            <a href="https://github.com" aria-label="github" class="link link--icon">
+              <img src="assets/img/github.svg" alt="GitHub" class="icon">
+            </a>
+            <a href="https://linkedin.com" aria-label="linkedin" class="link link--icon">
+              <img src="assets/img/linkedin.svg" alt="LinkedIn" class="icon">
+            </a>
+          </div>
         </div>
-      </section>
 
-      <section>
-        <h2>Skills</h2>
-        <div class="skills">
-          <span>JavaScript</span><span>Python</span><span>React</span><span>SQL</span><span>AWS</span><span>Design systems</span>
-        </div>
-      </section>
-    </main>
+        <section id="projects" class="section projects">
+          <h2 class="section__title">Projects</h2>
+
+          <div class="projects__grid">
+            <div class="project">
+              <img src="assets/img/project.svg" alt="Project 1 screenshot" style="width: 100%; object-fit: cover">
+              <h3>Project 1</h3>
+              <p class="project__description">
+                Amet asperiores et impedit aliquam consectetur. Voluptates sed a nulla ipsa
+                officia et esse aliquam.
+              </p>
+              <ul class="project__stack">
+                <li class="project__stack-item">SASS</li>
+                <li class="project__stack-item">TypeScript</li>
+                <li class="project__stack-item">React</li>
+              </ul>
+              <a href="https://github.com" aria-label="source code" class="link link--icon">
+                <img src="assets/img/github.svg" alt="Source code" class="icon">
+              </a>
+              <a href="https://github.com" aria-label="live preview" class="link link--icon">
+                <img src="assets/img/external.svg" alt="Live preview" class="icon">
+              </a>
+            </div>
+
+            <div class="project">
+              <img src="assets/img/project.svg" alt="Project 2 screenshot" style="width: 100%; object-fit: cover">
+              <h3>Project 2</h3>
+              <p class="project__description">
+                Amet asperiores et impedit aliquam consectetur. Voluptates sed a nulla ipsa
+                officia et esse aliquam.
+              </p>
+              <ul class="project__stack">
+                <li class="project__stack-item">SASS</li>
+                <li class="project__stack-item">TypeScript</li>
+                <li class="project__stack-item">React</li>
+              </ul>
+              <a href="https://github.com" aria-label="source code" class="link link--icon">
+                <img src="assets/img/github.svg" alt="Source code" class="icon">
+              </a>
+              <a href="https://github.com" aria-label="live preview" class="link link--icon">
+                <img src="assets/img/external.svg" alt="Live preview" class="icon">
+              </a>
+            </div>
+
+            <div class="project">
+              <img src="assets/img/project.svg" alt="Project 3 screenshot" style="width: 100%; object-fit: cover">
+              <h3>Project 3</h3>
+              <p class="project__description">
+                Amet asperiores et impedit aliquam consectetur. Voluptates sed a nulla ipsa
+                officia et esse aliquam.
+              </p>
+              <ul class="project__stack">
+                <li class="project__stack-item">SASS</li>
+                <li class="project__stack-item">TypeScript</li>
+                <li class="project__stack-item">React</li>
+              </ul>
+              <a href="https://github.com" aria-label="source code" class="link link--icon">
+                <img src="assets/img/github.svg" alt="Source code" class="icon">
+              </a>
+              <a href="https://github.com" aria-label="live preview" class="link link--icon">
+                <img src="assets/img/external.svg" alt="Live preview" class="icon">
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section class="section skills" id="skills">
+          <h2 class="section__title">Skills</h2>
+          <ul class="skills__list">
+            <li class="skills__list-item btn btn--plain">HTML</li>
+            <li class="skills__list-item btn btn--plain">CSS</li>
+            <li class="skills__list-item btn btn--plain">JavaScript</li>
+            <li class="skills__list-item btn btn--plain">TypeScript</li>
+            <li class="skills__list-item btn btn--plain">React</li>
+            <li class="skills__list-item btn btn--plain">Redux</li>
+            <li class="skills__list-item btn btn--plain">SASS</li>
+            <li class="skills__list-item btn btn--plain">Git</li>
+          </ul>
+        </section>
+
+        <section class="section contact center" id="contact">
+          <h2 class="section__title">Contact</h2>
+          <a href="mailto:johnsmith@mail.com"><span class="btn btn--outline">Email me</span></a>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <a href="https://github.com/rjshkhr/cleanfolio" class="link footer__link">Built with Cleanfolio</a>
+      </footer>
+    </div>
   
 
 </body></html>
