@@ -1,61 +1,74 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Field Notes</title>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Alex Chen — Resume</title>
     <style>
-      :root { --ink: #1a1a1a; --muted: #6b6b6b; --accent: #b4531f; --line: #ececec; }
+      :root { --ink: #1f2328; --muted: #6a737d; --accent: #0969da; --line: #e4e7eb; }
       * { box-sizing: border-box; }
-      body { margin: 0; font-family: Georgia, "Times New Roman", serif; color: var(--ink); background: #fbfaf8; line-height: 1.75; }
-      nav { display: flex; justify-content: space-between; align-items: baseline; max-width: 680px; margin: 0 auto; padding: 34px 24px 0; }
-      nav .brand { font-size: 1.3rem; font-weight: 700; letter-spacing: -0.01em; }
-      nav a { color: var(--muted); text-decoration: none; margin-left: 18px; font-size: 0.95rem; }
-      nav a:hover { color: var(--accent); }
-      main { max-width: 680px; margin: 0 auto; padding: 40px 24px 80px; }
-      .lede { font-size: 1.15rem; color: var(--muted); border-bottom: 1px solid var(--line); padding-bottom: 34px; margin-bottom: 10px; }
-      article { padding: 30px 0; border-bottom: 1px solid var(--line); }
-      article .date { color: var(--muted); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; }
-      article h2 { margin: 6px 0 8px; font-size: 1.55rem; }
-      article h2 a { color: var(--ink); text-decoration: none; }
-      article h2 a:hover { color: var(--accent); }
-      article p { margin: 0; color: #333; }
-      footer { text-align: center; color: var(--muted); padding: 30px; font-size: 0.9rem; }
+      body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; color: var(--ink); background: #f6f8fa; line-height: 1.6; }
+      main { max-width: 780px; margin: 40px auto; background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 48px; }
+      header { border-bottom: 2px solid var(--ink); padding-bottom: 20px; margin-bottom: 8px; }
+      header h1 { margin: 0; font-size: 2.2rem; }
+      header .role { color: var(--accent); font-weight: 700; margin: 4px 0 10px; }
+      header .contact { color: var(--muted); font-size: 0.92rem; }
+      header .contact a { color: var(--muted); text-decoration: none; }
+      section { padding: 24px 0; border-bottom: 1px solid var(--line); }
+      section:last-of-type { border-bottom: none; }
+      h2 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin: 0 0 16px; }
+      .item { margin-bottom: 18px; }
+      .item .top { display: flex; justify-content: space-between; gap: 12px; }
+      .item h3 { margin: 0; font-size: 1.05rem; }
+      .item .when { color: var(--muted); font-size: 0.88rem; white-space: nowrap; }
+      .item .org { color: var(--accent); font-weight: 600; font-size: 0.95rem; }
+      .item p { margin: 6px 0 0; color: #444; font-size: 0.95rem; }
+      .skills { display: flex; flex-wrap: wrap; gap: 8px; }
+      .skills span { background: #eef1f4; border-radius: 6px; padding: 5px 12px; font-size: 0.88rem; }
+      @media (max-width: 600px) { main { padding: 28px; margin: 16px; } }
     </style>
   </head>
   <body>
-    <nav>
-      <span class="brand">Field Notes</span>
-      <div>
-        <a href="#posts">Archive</a>
-        <a href="#about">About</a>
-      </div>
-    </nav>
-    <main id="posts">
-      <p class="lede">Occasional writing about design, code, and the things I'm learning along the way.</p>
+    <main>
+      <header>
+        <h1>Alex Chen</h1>
+        <p class="role">Software Engineer</p>
+        <p class="contact">San Francisco, CA · <a href="mailto:alex@example.com">alex@example.com</a> · <a href="#">linkedin.com/in/alexchen</a></p>
+      </header>
 
-      <article>
-        <span class="date">March 4, 2026</span>
-        <h2><a href="#">On keeping things small</a></h2>
-        <p>Every project starts simple and drifts toward complexity. Here's how I try to fight that drift — and why the smallest version is usually the right one to ship first.</p>
-      </article>
+      <section>
+        <h2>Summary</h2>
+        <p style="margin:0;color:#444;">Engineer with 6+ years building reliable web products end to end. I care about clear code, fast pages, and shipping things that hold up in production.</p>
+      </section>
 
-      <article>
-        <span class="date">February 18, 2026</span>
-        <h2><a href="#">A week without notifications</a></h2>
-        <p>I turned everything off for seven days. Some of it I turned back on. Most of it I didn't miss at all. A few notes on attention and defaults.</p>
-      </article>
+      <section>
+        <h2>Experience</h2>
+        
+        
+      <div class="item">
+          <div class="top"><h3>Senior Engineer</h3><span class="when">2023 — Present</span></div>
+          <div class="org">Northwind Labs</div>
+          <p>Led the rebuild of the core dashboard, cutting load time by 60% and mentoring three junior engineers.</p>
+        </div><div class="item">
+          <div class="top"><h3>Software Engineer</h3><span class="when">2020 — 2023</span></div>
+          <div class="org">Bright Peak</div>
+          <p>Shipped the billing and notifications systems from scratch, serving 40k monthly users.</p>
+        </div></section>
 
-      <article>
-        <span class="date">January 30, 2026</span>
-        <h2><a href="#">Writing is thinking</a></h2>
-        <p>The fastest way I've found to figure out what I actually believe is to try to explain it to someone else in plain words.</p>
-      </article>
+      <section>
+        <h2>Education</h2>
+        <div class="item">
+          <div class="top"><h3>B.S. Computer Science</h3><span class="when">2016 — 2020</span></div>
+          <div class="org">State University</div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Skills</h2>
+        <div class="skills">
+          <span>JavaScript</span><span>Python</span><span>React</span><span>SQL</span><span>AWS</span><span>Design systems</span>
+        </div>
+      </section>
     </main>
-    <section id="about" style="max-width:680px;margin:0 auto;padding:34px 24px;border-top:1px solid var(--line);">
-      <h2 style="font-size:1.4rem;margin:0 0 10px;">About</h2>
-      <p style="margin:0;color:#333;">I'm a writer and maker sharing notes on design, code, and the things I'm learning. Say hello at <a href="mailto:hello@example.com" style="color:var(--accent);">hello@example.com</a>.</p>
-    </section>
-    <footer>© 2026 · Written by hand.</footer>
-  </body>
-</html>
+  
+
+</body></html>
